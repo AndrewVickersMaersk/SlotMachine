@@ -39,7 +39,6 @@ void PlayGame(Player player)
 
         DisplaySpins(spins);
         var coefficient = CalculateGameCoefficient(spins);
-        Console.WriteLine(coefficient);
         var winnings = stake * coefficient;
 
         player.Balance += winnings;
