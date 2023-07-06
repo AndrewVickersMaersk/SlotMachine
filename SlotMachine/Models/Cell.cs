@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SlotMachine.Enums;
+﻿using SlotMachine.Enums;
 
 namespace SlotMachine.Models
 {
-    internal class Cell
+    public class Cell
     {
         private string _displaySymbol;
-        private double _coefficient;
+        private decimal _coefficient;
 
         public string DisplaySymbol
         {
             get => _displaySymbol;
         }
 
-        public double Coefficient
+        public decimal Coefficient
         {
             get => _coefficient;
         }
@@ -27,19 +22,19 @@ namespace SlotMachine.Models
             switch(symbol)
             {
                 case Symbol.Apple:
-                    _coefficient = 0.4;
+                    _coefficient = 0.4M;
                     _displaySymbol = "A";
                     break;
                 case Symbol.Banana:
-                    _coefficient = 0.6;
+                    _coefficient = 0.6M;
                     _displaySymbol = "B";
                     break;
                 case Symbol.Pineapple:
-                    _coefficient = 0.8;
+                    _coefficient = 0.8M;
                     _displaySymbol = "P";
                     break;
                 case Symbol.Wildcard:
-                    _coefficient = 0;
+                    _coefficient = 0M;
                     _displaySymbol = "*";
                     break;
             }

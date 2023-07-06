@@ -2,22 +2,22 @@
 
 public class Game
 {
-    private double _stake;
-    private double _coefficient;
+    private decimal _stake;
+    private decimal _coefficient;
     public DateTime DatePlayed { get; set; }
 
-    public double Stake
+    public decimal Stake
     {
         get => _stake;
         private set => _stake = value;
     }
-    public double Coefficient
+    public decimal Coefficient
     {
         get => _coefficient;
         set => _coefficient = value;
     }
     
-    public Game(double stake)
+    public Game(decimal stake)
     {
         DatePlayed = DateTime.Now;
         _stake = stake;

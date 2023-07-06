@@ -2,5 +2,5 @@
 
 public class Player
 {
-    public double Balance { get; set; }
+    public decimal Balance { get; set; }
 }
