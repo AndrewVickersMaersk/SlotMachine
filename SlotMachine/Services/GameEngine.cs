@@ -5,7 +5,7 @@ namespace SlotMachine.Services;
 
 public static class GameEngine
 {
-    private static Player player;
+    private static Player player = null!;
 
     public static void PlayGame()
     {
@@ -59,7 +59,7 @@ public static class GameEngine
             var row = new List<decimal>();
             for (int j = 0; j < 3; j++)
             {
-                row.Add(spins[i, j].Coefficient);
+                if (spins != null) row.Add(spins[i, j].Coefficient);
             }
 
             var results = from cell in row
@@ -90,7 +90,7 @@ public static class GameEngine
         {
             for (int j = 0; j < 3; j++)
             {
-                Console.Write(spins[i, j].DisplaySymbol);
+                if (spins != null) Console.Write(spins[i, j].DisplaySymbol);
             }
 
             Console.WriteLine();

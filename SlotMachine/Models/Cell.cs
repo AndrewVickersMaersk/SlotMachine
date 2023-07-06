@@ -4,7 +4,7 @@ namespace SlotMachine.Models
 {
     public class Cell
     {
-        private string _displaySymbol;
+        private string _displaySymbol = null!;
         private decimal _coefficient;
 
         public string DisplaySymbol
